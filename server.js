@@ -8,7 +8,9 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send({ message: "hello world server running" });
+  res.send({
+    message: "Hi team Surviving with google! Our amazing is server running!",
+  });
 });
 
 app.listen(process.env.PORT || port, (err) => {
