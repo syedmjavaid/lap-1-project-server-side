@@ -1,17 +1,16 @@
 [
   {
     "id": 1,
-    "time": 1.0,
+    "time": 1,
     "text": "Hi team Surviving with google! Our amazing is server running!"
   },
   {
     "id": 2,
-    "time": 13.0,
+    "time": 13,
     "text": "Hi Al-Jazari Cohort! Our amazing is server running!"
   },
-  {
-    "id": 3,
-    "time": 16.0,
-    "text": "third test"
-  }
+  { "id": 3, "time": 16, "text": "third test" },
+  { "id": 4, "time": 15, "text": "post request" },
+  { "id": 5, "time": 15, "text": "post request 2" },
+  { "id": 56, "time": 15, "text": "post request 3" }
 ]

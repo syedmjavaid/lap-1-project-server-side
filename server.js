@@ -39,6 +39,16 @@ app.get("/:id", (req, res) => {
   });
 });
 
+app.post("/", (req, res) => {
+  const newData = req.body;
+  let data = fs.readFileSync("./models/data/data.json", "utf-8");
+  let dataArray = JSON.parse(data);
+  dataArray.push(newData);
+  data = JSON.stringify(dataArray);
+  fs.writeFileSync("./models/data/data.json", data, "utf-8");
+  res.status(201).send({ "Added message": newData });
+});
+
 app.listen(process.env.PORT || port, (err) => {
   if (err) console.log(err);
   console.log(`Listening on port ${port}...`);
