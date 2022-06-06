@@ -56,3 +56,5 @@ app.listen(process.env.PORT || port, (err) => {
   if (err) console.log(err);
   console.log(`Listening on port ${port}...`);
 });
+
+module.exports = app;
