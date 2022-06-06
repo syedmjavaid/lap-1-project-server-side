@@ -1,0 +1,30 @@
+{
+  "name": "lap-1-project-server-side",
+  "version": "1.0.0",
+  "description": "Back-end for the futureproof LAP1 project",
+  "main": "api.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedmjavaid/lap-1-project-server-side.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedmjavaid/lap-1-project-server-side/issues"
+  },
+  "homepage": "https://github.com/syedmjavaid/lap-1-project-server-side#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
+  }
+}
