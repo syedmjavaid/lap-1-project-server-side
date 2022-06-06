@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// GET all posts
 app.get("/", (req, res) => {
   fs.readFile("./models/data/data.json", "utf8", (err, jsonString) => {
     if (err) console.log(err);
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
   });
 });
 
+// GET posts by ID
 app.get("/:id", (req, res) => {
   const postId = req.params.id;
   fs.readFile("./models/data/data.json", "utf8", (err, jsonString) => {
@@ -39,6 +41,7 @@ app.get("/:id", (req, res) => {
   });
 });
 
+// POST new posts
 app.post("/", (req, res) => {
   const newData = req.body;
   let data = fs.readFileSync("./models/data/data.json", "utf-8");
