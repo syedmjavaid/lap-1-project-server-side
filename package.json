@@ -5,8 +5,8 @@
   "main": "api.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node listen.js",
+    "dev": "nodemon listen.js"
   },
   "repository": {
     "type": "git",
