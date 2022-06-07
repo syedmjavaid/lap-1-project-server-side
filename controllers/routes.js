@@ -1,4 +1,5 @@
 const express = require("express");
+const { send } = require("express/lib/response");
 const router = express.Router();
 const { fetchAll, fetchById, fetchPost } = require("../models/post");
 
@@ -10,10 +11,12 @@ router.get("/", (req, res) => {
 });
 
 // GET posts by ID
-router.get("/:id", (req, res) => {
+router.get("/:id", (req, res, next) => {
   const postId = req.params.id;
   fetchById(postId, (err, data) => {
     res.status(200).send(data);
+  }).catch((err) => {
+    next(err);
   });
 });
 
