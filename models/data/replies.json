@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "time": 1,
+    "reply": "cool story bro"
+  },
+  {
+    "id": 1,
+    "time": 13,
+    "text": "very cool story"
+  },
+  { "id": 2, "time": 16, "text": "wow another cool story" },
+  {
+    "id": 2,
+    "time": 1,
+    "reply": "awesome story"
+  },
+  {
+    "id": 1,
+    "time": 13,
+    "text": "so inspiring"
+  }
+]
