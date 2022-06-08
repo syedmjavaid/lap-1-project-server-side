@@ -1,6 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { fetchAll, fetchById, fetchPost } = require("../models/post");
+const {
+  fetchAll,
+  fetchById,
+  fetchPost,
+  fetchReplyById,
+  fetchPostReplyById,
+} = require("../models/post");
 
 let Filter = require("bad-words"),
   filter = new Filter();
@@ -17,8 +23,6 @@ router.get("/:id", (req, res, next) => {
   const postId = req.params.id;
   fetchById(postId, (err, data) => {
     res.status(200).send(data);
-  }).catch((err) => {
-    next(err);
   });
 });
 
@@ -29,6 +33,22 @@ router.post("/", (req, res) => {
   newData.text = cleanText;
   fetchPost(newData, (data) => {
     res.status(201).send({ "Added message": data, newData });
+  });
+});
+
+// GET replies to posts
+router.get("/:id/replies", (req, res, next) => {
+  const postId = req.params.id;
+  fetchReplyById(postId, (err, data) => {
+    res.status(200).send(data);
+  });
+});
+
+// POST replies to posts
+router.get("/:id/replies", (req, res, next) => {
+  const postId = req.params.id;
+  fetchPostReplyById(postId, (err, data) => {
+    res.status(200).send(data);
   });
 });
 

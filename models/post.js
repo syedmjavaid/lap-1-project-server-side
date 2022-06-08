@@ -37,3 +37,30 @@ exports.fetchPost = (newData, callback) => {
   fs.writeFileSync("./models/data/data.json", data, "utf-8");
   callback("post request successful");
 };
+
+exports.fetchReplyById = (postId, callback) => {
+  fs.readFile("./models/data/replies.json", "utf8", (err, jsonString) => {
+    if (err) console.log(err);
+    try {
+      const data = JSON.parse(jsonString);
+      const replies = [];
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].id == postId) {
+          replies.push(data[i]);
+        }
+      }
+      callback(err, replies);
+    } catch (err) {
+      console.log("Error parsing JSON string:", err);
+    }
+  });
+};
+
+exports.fetchPostReplyById = (newData, callback) => {
+  let data = fs.readFileSync("./models/data/replies.json", "utf-8");
+  let dataArray = JSON.parse(data);
+  dataArray.push(newData);
+  data = JSON.stringify(dataArray);
+  fs.writeFileSync("./models/data/data.json", data, "utf-8");
+  callback("post request successful");
+};
