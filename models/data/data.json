@@ -43,5 +43,9 @@
     "id": 80,
     "time": 10.06,
     "text": "post req in model works and returns response"
-  }
+  },
+  "[object Object]",
+  "should filter this word: ****",
+  { "id": 100, "time": 10.06, "text": "should filter this word: ****" },
+  { "id": 101, "time": 10.06, "text": "should filter this word as well: ****" }
 ]
