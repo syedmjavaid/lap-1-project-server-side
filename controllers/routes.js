@@ -50,7 +50,7 @@ router.post("/:id/replies", (req, res, next) => {
   const replyBody = req.body;
   const cleanReply = filter.clean(replyBody.reply.toString());
   replyBody.reply = cleanReply;
-  fetchPostReplyById(postId, replyBody, (err, data) => {
+  fetchPostReplyById(postId, replyBody, (data) => {
     res.status(201).send({ "Added reply": data, replyBody });
   });
 });
