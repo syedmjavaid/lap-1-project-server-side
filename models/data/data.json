@@ -1,1 +1,13 @@
-[{"id":1,"time":1,"text":"Hi team Surviving with google! Our amazing is server running!"},{"id":2,"time":13,"text":"Hi Al-Jazari Cohort! Our amazing is server running!"},{"id":3,"time":16,"text":"third test"},{"id":101,"time":10.06,"text":"should filter this word as well: ****"},{"id":16,"time":1,"text":"wowwwwwwwwww"}]
+[
+  {
+    "id": 1,
+    "time": 1,
+    "text": "Hi team Surviving with google! Our amazing is server running!"
+  },
+  {
+    "id": 2,
+    "time": 13,
+    "text": "Hi Al-Jazari Cohort! Our amazing is server running!"
+  },
+  { "id": 3, "time": 16, "text": "third test" }
+]

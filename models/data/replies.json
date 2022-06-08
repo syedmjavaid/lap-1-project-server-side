@@ -3,15 +3,5 @@
   { "id": 1, "time": 13, "text": "very cool story" },
   { "id": 2, "time": 16, "text": "wow another cool story" },
   { "id": 2, "time": 1, "reply": "awesome story" },
-  { "id": 1, "time": 13, "text": "so inspiring" },
-  { "reply": "this post is: ****", "id": "1" },
-  { "reply": "this post is: ****", "id": "1" },
-  { "reply": "this post is: ****", "id": "5" },
-  { "reply": "this post is: great", "id": "5" },
-  { "reply": "this post is not: great", "id": "5" },
-  { "reply": "this post is not: great wowwwww", "id": "5" },
-  { "reply": "this post is not: great wowwwww", "id": "5" },
-  { "reply": "this post is not: great wowwwww", "id": "5" },
-  { "reply": "this post is not: great wowwwww", "id": "5" },
-  { "reply": "this post is not: great wowwwww", "id": "5" }
+  { "id": 1, "time": 13, "text": "so inspiring" }
 ]
