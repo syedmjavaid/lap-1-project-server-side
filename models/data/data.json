@@ -9,5 +9,6 @@
     "time": 13,
     "text": "Hi Al-Jazari Cohort! Our amazing is server running!"
   },
-  { "id": 3, "time": 16, "text": "third test" }
+  { "id": 3, "time": 16, "text": "third test" },
+  { "id": 101, "time": 10.06, "text": "should filter this word as well: ****" }
 ]
