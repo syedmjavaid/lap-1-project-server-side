@@ -56,11 +56,12 @@ exports.fetchReplyById = (postId, callback) => {
   });
 };
 
-exports.fetchPostReplyById = (newData, callback) => {
+exports.fetchPostReplyById = (postId, replyBody, callback) => {
   let data = fs.readFileSync("./models/data/replies.json", "utf-8");
   let dataArray = JSON.parse(data);
-  dataArray.push(newData);
+  replyBody.id = postId;
+  dataArray.push(replyBody);
   data = JSON.stringify(dataArray);
-  fs.writeFileSync("./models/data/data.json", data, "utf-8");
+  fs.writeFileSync("./models/data/replies.json", data, "utf-8");
   callback("post request successful");
 };

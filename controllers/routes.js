@@ -45,10 +45,13 @@ router.get("/:id/replies", (req, res, next) => {
 });
 
 // POST replies to posts
-router.get("/:id/replies", (req, res, next) => {
+router.post("/:id/replies", (req, res, next) => {
   const postId = req.params.id;
-  fetchPostReplyById(postId, (err, data) => {
-    res.status(200).send(data);
+  const replyBody = req.body;
+  const cleanReply = filter.clean(replyBody.reply.toString());
+  replyBody.reply = cleanReply;
+  fetchPostReplyById(postId, replyBody, (err, data) => {
+    res.status(201).send({ "Added reply": data, replyBody });
   });
 });
 
