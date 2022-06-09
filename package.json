@@ -4,7 +4,7 @@
   "description": "Back-end for the futureproof LAP1 project",
   "main": "api.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "node listen.js",
     "dev": "nodemon listen.js"
   },
