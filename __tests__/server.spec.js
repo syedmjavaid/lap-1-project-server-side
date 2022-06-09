@@ -1,6 +1,17 @@
 const app = require("../server");
 const request = require("supertest");
-const { json } = require("express/lib/response");
+const { json, jsonp } = require("express/lib/response");
+const { fetchAll } = require("../models/post");
+
+describe('Server.js', () => {
+
+  it('should return 404 error code', async () => {
+    const response = await request(app).post("/");
+    expect(response.status).toEqual(404);
+    expect(response.body).toEqual({"msg": "404 Not Found"});
+  });
+  
+});
 
 describe("GET /", () => {
   test("200: Responds with an array of messages", () => {
@@ -16,30 +27,12 @@ describe("GET /", () => {
         });
       });
   });
-
-  test('should return error code 404 from server', () => {
-    return request(app)
-    .get('/')
-    .expect(200)
-    .then((res) => {
-      expect(res.status).toBe(404)
-    })
-  });
 });
 
 describe("GET /:id", () => {
-  // test.only("200: Responds with correct ID", () => {
-  //   return request(app)
-  //     .get("/1")
-  //     .expect(200)
-  //     .then((res) => {
-  //       console.log(res.body.id);
-  //       expect(res.body.id).toBe(1);
-  //     });
-  // });
+
   it("GET /:id should return the expected object id", async () => {
     const response = await request(app).get("/1");
-    console.log(response.body.id);
     expect(response.status).toEqual(200);
     expect(response.body.id).toEqual(1);
   });
@@ -63,10 +56,6 @@ describe('testing models', () => {
     });
   });
 
-  test('should return ', () => {
-    
-  });
-
   test('should have status 200 and return an array of objects ', () => {
     return request(app)
     .get('/')
@@ -83,13 +72,6 @@ describe('testing models', () => {
     .then((res) => {
       expect(res.statusCode).toBe(200)
     })
-  });
-  
-});
-
-describe('models testing', () => {
-  test('should ', () => {
-    
   });
   
 });
