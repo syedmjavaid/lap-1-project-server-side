@@ -38,7 +38,7 @@ $ npm t
 
 ## Hosting
 
-The API is hosted on [Heroku](https://lap1-project-backend.herokuapp.com/). This URL can be used as the base URL.
+The API is hosted on [Heroku](https://lap1-project-backend.herokuapp.com/). This URL can be used as the base URL. Previews of the what requests and responses look like are avaialbe here.
 
 ## Requests
 
@@ -46,13 +46,13 @@ These are the requests that can be made to the API:
 
 GET:
 
-- **/** - gets all messages
+- **/all** - gets all messages
 - **/:id** - gets messages by their Id's
 - **/:id/replies** - gets all replies to messages by the message ID
 
 POST:
 
-- **/** - posts body from client onto the database
+- **/post** - posts body from client onto the database
 - **/:id/replies** - posts reply body onto database corresponding to message ID
 
 Add these endpoints to the base URL to make a request
