@@ -12,7 +12,7 @@ let Filter = require("bad-words"),
   filter = new Filter();
 
 // GET all posts
-router.get("/", (req, res) => {
+router.get("/all", (req, res) => {
   fetchAll((err, data) => {
     res.status(200).send(data);
   });
@@ -27,7 +27,7 @@ router.get("/:id", (req, res, next) => {
 });
 
 // POST new posts
-router.post("/", (req, res) => {
+router.post("/post", (req, res) => {
   const newData = req.body;
   const cleanText = filter.clean(newData.text.toString());
   newData.text = cleanText;

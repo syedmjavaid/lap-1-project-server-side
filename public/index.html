@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://avatars.githubusercontent.com/u/67379980?s=200&v=4"
+    />
+    <title>Lap 1 - futureproof API</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lap 1 - futureproof API</h1>
+
+      <h2>Routes</h2>
+
+      <article>
+        <details>
+          <summary>GET /all</summary>
+          <details>
+            <summary>Example Response</summary>
+            <pre>
+                    [
+                      {
+                        id: Number,
+                        time: Number,
+                        text: String
+                      },
+                      {
+                        id: Number,
+                        time: Number,
+                        text: String
+                      } ...
+                    ]
+                </pre
+            >
+          </details>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary>GET /:id</summary>
+          <details>
+            <summary>Example Response</summary>
+            <pre>
+
+                      {
+                        id: Number,
+                        time: Number,
+                        text: String
+                      }
+                    
+                </pre
+            >
+          </details>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary>GET /:id/replies</summary>
+          <details>
+            <summary>Example Response</summary>
+            <pre>
+
+              [
+                {
+                  id: Number,
+                  time: Number,
+                  reply: String
+                },
+                {
+                  id: Number,
+                  time: Number,
+                  reply: String
+                } ...
+              ]
+                    
+                </pre
+            >
+          </details>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary>POST /post</summary>
+          <details>
+            <summary>Example Request</summary>
+            <pre>
+              {
+                id: Number,
+                time: Number,
+                reply: String
+              }
+            </pre>
+          </details>
+          <details>
+            <summary>Example Response</summary>
+            <pre>
+
+              
+             {   
+             "Added message": "post request successful",
+              newData: {
+                  id: Number,
+                  time: Number,
+                  reply: String
+                } 
+             }   
+                </pre
+            >
+          </details>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary>POST /:id/replies</summary>
+          <details>
+            <summary>Example Request</summary>
+            <pre>
+              {
+                id: Number,
+                time: Number,
+                text: String
+              }
+            </pre>
+          </details>
+          <details>
+            <summary>Example Response</summary>
+            <pre>
+
+              
+             {   
+             "Added message": "post request successful",
+              newData: {
+                  id: Number,
+                  time: Number,
+                  text: String
+                } 
+             }   
+                </pre
+            >
+          </details>
+        </details>
+      </article>
+    </header>
+  </body>
+</html>
