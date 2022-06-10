@@ -2,11 +2,13 @@
   {
     "id": 1,
     "time": 1,
-    "text": "Hi, We are team Surviving with google! Our amazing webapp is running!"
+    "text": "Hi, We are team Surviving with google! Our amazing webapp is running!",
+    "gif": "https://avatars.githubusercontent.com/u/67379980?s=200&v=4"
   },
   {
     "id": 2,
     "time": 13,
-    "text": "Hi Al-Jazari Cohort! Are you ready to see the best app ever!"
+    "text": "Hi Al-Jazari Cohort! Are you ready to see the best app ever!",
+    "gif": "https://www.thefamouspeople.com/profiles/images/ismail-al-jazari-2.jpg"
   }
 ]
